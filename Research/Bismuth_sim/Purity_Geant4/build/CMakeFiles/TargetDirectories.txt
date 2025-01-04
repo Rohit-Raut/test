@@ -1,3 +1,0 @@
-/Users/rohit/Research/Bismuth_sim/Purity_Geant4/build/CMakeFiles/GEANT4.dir
-/Users/rohit/Research/Bismuth_sim/Purity_Geant4/build/CMakeFiles/edit_cache.dir
-/Users/rohit/Research/Bismuth_sim/Purity_Geant4/build/CMakeFiles/rebuild_cache.dir
