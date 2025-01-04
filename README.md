@@ -10,14 +10,11 @@
 - [Usage](#usage)
 - [Project Structure](#project-structure)
 - [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
 - [Acknowledgements](#acknowledgements)
-- [Future Work](#future-work)
 
 ## Introduction
 
-**Bismuth-207 Purity Monitor** is a comprehensive simulation toolkit developed to model and analyze the behavior of Bismuth-207 (\(^{207}\text{Bi}\)) radioactive sources within a cylindrical drift chamber-based purity monitor. Utilizing the powerful [Geant4](https://geant4.web.cern.ch/) framework, this project aims to provide accurate simulations of radioactive decay processes, electron emission, and their interactions within liquid argon (LAr) environments. The simulation is instrumental in assessing and ensuring the purity of LAr by measuring free electron lifetimes, which are critical for applications in particle physics experiments and dark matter detection.
+**Bismuth-207 Purity Monitor** is a comprehensive simulation toolkit developed to model and analyze the behavior of Bismuth-207 radioactive sources within a cylindrical drift chamber-based purity monitor. Utilizing the powerful [Geant4](https://geant4.web.cern.ch/) framework, this project aims to provide accurate simulations of radioactive decay processes, electron emission, and their interactions within liquid argon (LAr) environments. The simulation is instrumental in assessing and ensuring the purity of LAr by measuring free electron lifetimes, which are critical for applications in particle physics experiments and dark matter detection.
 
 ## Features
 
@@ -173,14 +170,11 @@ Contributions are welcome! Whether it's reporting bugs, suggesting enhancements,
 
     Navigate to the original repository and submit a pull request from your feature branch.
 
-### Code of Conduct
-
-Please adhere to the [Code of Conduct](CODE_OF_CONDUCT.md) when contributing to this project.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
 ---
+## Acknowledgements
+
+- **Geant4 Collaboration:** For providing a robust framework for particle simulations.
+- **Open-Source Community:** For numerous libraries and tools that made this project possible.
+- **CERN and University of Texas at Arlington:** For supporting this research and development.
 
 ---
