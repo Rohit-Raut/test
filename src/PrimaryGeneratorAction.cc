@@ -10,7 +10,13 @@ G4ParticleDefinition* GetBi207()
 {
     G4int Z = 83, A = 207;
     G4double excitation = 0.0*keV;
-    return G4IonTable::GetIonTable()->GetIon(Z, A, excitation);
+    auto ion =  G4IonTable::GetIonTable()->GetIon(Z, A, excitation);
+    if (!ion)
+    {
+        G4Exception("GetBi207", "Bi207Initialization", FatalException,"Unable to create Bi-207 ion. Ensure GenericIon is initialized.");
+    }
+    return ion;
+
 }
 PrimaryGeneratorAction::PrimaryGeneratorAction()
 {
@@ -20,6 +26,7 @@ PrimaryGeneratorAction::PrimaryGeneratorAction()
     //particleSource->GetCurrentSource()->GetAngDist()->SetIso();
     //particleSource->GetCurrentSource()->GetEneDistribution()->SetMonoEnergy(0.0*keV);
     //particleSource->SetParticleMomentumDirection(G4ThreeVector(0., 0., 0.));
+    particleSource->SetNumberOfParticles(37000);
 }
 
 PrimaryGeneratorAction::~PrimaryGeneratorAction()
