@@ -1,0 +1,32 @@
+# vis.mac
+/control/verbose 2
+/run/verbose 2
+/tracking/verbose 1
+
+# Initialize the run, so geometry is built
+/run/initialize
+
+# Open an OpenGL visualization window (600x600 pixels)
+# Syntax: /vis/open <driver> [windowSize] [windowPosition]
+/vis/open OGL 600x600-0+0
+
+# Optional visualization style: "surface" draws solid objects
+/vis/viewer/set/style surface
+
+# Increase the smoothness of circles & arcs
+/vis/viewer/setLineSegmentsPerCircle 50
+
+# Draw the detector geometry
+/vis/drawVolume
+
+# Display a 1-meter axes at the origin
+/vis/scene/addAxes 0 0 0 1 m
+
+# Set background color (here: light grayish)
+# Values range from 0 (dark) to 1 (bright)
+/vis/viewer/setBackground 0.9 0.9 0.9
+
+# If you want to run some events automatically:
+#/run/beamOn 10
+
+

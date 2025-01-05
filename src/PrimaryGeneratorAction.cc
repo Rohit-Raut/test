@@ -21,19 +21,25 @@ G4ParticleDefinition* GetBi207()
 PrimaryGeneratorAction::PrimaryGeneratorAction()
 {
     particleSource = new G4GeneralParticleSource();
-    G4ParticleDefinition* bi207 = GetBi207();
-    particleSource->SetParticleDefinition(bi207);
-    //particleSource->GetCurrentSource()->GetAngDist()->SetIso();
-    //particleSource->GetCurrentSource()->GetEneDistribution()->SetMonoEnergy(0.0*keV);
-    //particleSource->SetParticleMomentumDirection(G4ThreeVector(0., 0., 0.));
-    particleSource->SetNumberOfParticles(37000);
+    particleSource->SetNumberOfParticles(10);
+    particleSource->GetCurrentSource()->GetEneDist()->SetMonoEnergy(0.0*MeV);
+    particleSource->GetCurrentSource()->GetAngDist()->SetAngDistType("iso");
+    //Later on change this to 37000
+}
+
+void PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
+{
+    static bool firstCall = true;
+    if (firstCall)
+    {
+        G4ParticleDefinition* bi207 = GetBi207();
+        particleSource->SetParticleDefinition(bi207);
+        firstCall = false;
+    }
+    particleSource->GeneratePrimaryVertex(anEvent);
 }
 
 PrimaryGeneratorAction::~PrimaryGeneratorAction()
 {
     delete particleSource;
-}
-void PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
-{
-    particleSource->GeneratePrimaryVertex(anEvent);
 }

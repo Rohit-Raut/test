@@ -50,7 +50,7 @@ int main(int argc, char** argv)
     G4RunManager* runManager = new G4RunManager;
     runManager->SetUserInitialization(new DetectorConstruction);
     runManager->SetUserInitialization(new PhysicsList);
-
+    //runManager->SetUserInitialization(new QGSP_BERT);
     runManager->SetUserAction(new PrimaryGeneratorAction);
 
     G4VisManager* visManager = new G4VisExecutive;
@@ -58,7 +58,7 @@ int main(int argc, char** argv)
 
     G4UIExecutive* ui = new G4UIExecutive(argc, argv);
     G4UImanager* UImanager = G4UImanager::GetUIpointer();
-    UImanager->ApplyCommand("/control/execute vis.mac");
+    UImanager->ApplyCommand("/control/execute /Users/rohit/Research/Bismuth_sim/Purity_Geant4/vis.mac");
     ui->SessionStart();
     delete ui;
     delete visManager;
