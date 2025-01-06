@@ -9,7 +9,7 @@
 G4ParticleDefinition* GetBi207()
 {
     G4int Z = 83, A = 207;
-    G4double excitation = 0.0*keV;
+    G4double excitation = 10.0*keV;
     auto ion =  G4IonTable::GetIonTable()->GetIon(Z, A, excitation);
     if (!ion)
     {

@@ -14,14 +14,18 @@
 #include "G4LeptonConstructor.hh"
 #include "G4MesonConstructor.hh"
 #include "G4BaryonConstructor.hh"
+#include "G4BosonConstructor.hh"
 #include "G4IonConstructor.hh"
+#include "G4PhotoElectricEffect.hh"
+#include "G4ComptonScattering.hh"
+#include "G4GammaConversion.hh"
 
 
 
 
 PhysicsList::PhysicsList() : G4VModularPhysicsList()
 {
-    const G4double meanlife = 1 * second;
+    const G4double meanlife = 1 * nanosecond;
     G4NuclideTable::GetInstance()->SetMeanLifeThreshold(meanlife);
     G4NuclideTable::GetInstance()->SetLevelTolerance(1.0 * eV);
     SetDefaultCutValue(1.0 * mm);
@@ -33,9 +37,17 @@ void PhysicsList::ConstructParticle()
 {
     // G4EmBuilder::ConstructMinimalEmSet();
     G4GenericIon::GenericIonDefinition();
-    G4LeptonConstructor lConstructor; lConstructor.ConstructParticle();
-    G4MesonConstructor mConstructor;  mConstructor.ConstructParticle();
-    G4BaryonConstructor bConstructor; bConstructor.ConstructParticle();
+    G4BaryonConstructor baryon;
+    baryon.ConstructParticle();
+
+    G4BosonConstructor boson;
+    boson.ConstructParticle();
+
+    G4MesonConstructor meson;
+    meson.ConstructParticle();
+
+    G4LeptonConstructor lepton;
+    lepton.ConstructParticle();
 }
 
 void PhysicsList::ConstructProcess()

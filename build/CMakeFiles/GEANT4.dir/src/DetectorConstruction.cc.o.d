@@ -1118,4 +1118,33 @@ CMakeFiles/GEANT4.dir/src/DetectorConstruction.cc.o: \
   /Users/rohit/geant4-v11.3.0-install/include/Geant4/graphics_reps_defs.hh \
   /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4Colour.hh \
   /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4Color.hh \
-  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4VisAttributes.icc
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4VisAttributes.icc \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4UniformElectricField.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4ElectricField.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4ElectroMagneticField.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4Field.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4FieldManager.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4FieldManager.icc \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4ChordFinder.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4VIntegrationDriver.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4FieldTrack.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4ChargeState.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4FieldTrack.icc \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4EquationOfMotion.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4EquationOfMotion.icc \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4MagIntegratorStepper.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4IntegrationDriver.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4RKIntegrationDriver.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4RKIntegrationDriver.icc \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4ChordFinderDelegate.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4ChordFinderDelegate.icc \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4IntegrationDriver.icc \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4FieldUtils.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4FieldUtils.icc \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4MagIntegratorStepper.icc \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4ChordFinder.icc \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4EqMagElectricField.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4ClassicalRK4.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4MagErrorStepper.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4Mag_EqRhs.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4MagErrorStepper.icc

@@ -15,6 +15,12 @@
 #include <G4Isotope.hh>
 #include <G4Element.hh>
 #include <G4Material.hh>
+#include <G4UniformElectricField.hh>
+#include <G4FieldManager.hh>
+#include <G4ChordFinder.hh>
+#include <G4EqMagElectricField.hh>
+#include <G4ClassicalRK4.hh>
+
 
 DetectorConstruction::DetectorConstruction()
 : G4VUserDetectorConstruction(),
@@ -94,6 +100,7 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
     G4LogicalVolume* logicBi207 = new G4LogicalVolume(solidBi207, matBi207, "Bi207Source");
     G4PVPlacement* physBi207 = new G4PVPlacement(nullptr, biPosition, logicBi207, "Bi207Source", logicTiFoil, false, 0, true);
 
+    //for Electrif Field inside the detector
 
 
     logicWorld->SetVisAttributes(G4VisAttributes::GetInvisible());
@@ -106,10 +113,13 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
     G4VisAttributes* outerDiskVis = new G4VisAttributes(G4Colour(1.0, 0.5,0.0, 0.6));
     logicOuterDisk->SetVisAttributes(outerDiskVis);
 
-    G4VisAttributes* visAttrCathode = new G4VisAttributes(G4Colour(0.8, 0.8, 0.8)); 
-    logicTiFoil->SetVisAttributes(visAttrCathode);
+    G4VisAttributes* viscathode = new G4VisAttributes(G4Colour(0.6, 0.6,0.6, 0.2));
+    logicCathode->SetVisAttributes(viscathode);
 
-    G4VisAttributes* visAttrBi207 = new G4VisAttributes(G4Colour(1.0, 0.0, 0.0)); 
+    G4VisAttributes* visAttrFoil = new G4VisAttributes(G4Colour(0.19, 0.19, 0.19,0.3)); 
+    logicTiFoil->SetVisAttributes(visAttrFoil);
+
+    G4VisAttributes* visAttrBi207 = new G4VisAttributes(G4Colour(0.24, 0.23, 0.23,1.0)); 
     logicBi207->SetVisAttributes(visAttrBi207);
 
     return physWorld;

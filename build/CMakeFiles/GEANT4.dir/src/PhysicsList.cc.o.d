@@ -1373,4 +1373,14 @@ CMakeFiles/GEANT4.dir/src/PhysicsList.cc.o: \
   /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4LeptonConstructor.hh \
   /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4MesonConstructor.hh \
   /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4BaryonConstructor.hh \
-  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4IonConstructor.hh
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4BosonConstructor.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4IonConstructor.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4PhotoElectricEffect.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4VEmProcess.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4VDiscreteProcess.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4UnitsTable.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4UnitsTable.icc \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4ParticleChangeForGamma.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4EmDataHandler.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4ComptonScattering.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4GammaConversion.hh
