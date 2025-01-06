@@ -44,6 +44,8 @@
 #include "include/DetectorConstruction.hh"
 #include "include/PhysicsList.hh"
 #include "include/PrimaryGeneratorAction.hh"
+#include "include/EventAction.hh"
+#include "include/HistoManager.hh"
 
 int main(int argc, char** argv)
 {
@@ -52,6 +54,11 @@ int main(int argc, char** argv)
     runManager->SetUserInitialization(new PhysicsList);
     //runManager->SetUserInitialization(new QGSP_BERT);
     runManager->SetUserAction(new PrimaryGeneratorAction);
+
+    HistoManager* histo = new HistoManager;
+
+    auto eventAction = new EventAction(histo);
+    runManager->SetUserAction(eventAction);
 
     G4VisManager* visManager = new G4VisExecutive;
     visManager->Initialize();
@@ -62,6 +69,7 @@ int main(int argc, char** argv)
     ui->SessionStart();
     delete ui;
     delete visManager;
+    delete histo;
     delete runManager;
     return 0;
 }

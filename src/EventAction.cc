@@ -33,9 +33,18 @@ void EventAction::EndOfEventAction(const G4Event* event)
     {
         G4cout << ">>> Event " << eventID << " processed" << G4endl;
     }
+    G4TrajectoryContainer* trajectory= event->GetTrajectoryContainer();
+    if (trajectory)
+    {
+        for(size_t i=0;i<trajectory->size();i++)
+        {
+            G4Trajectory* trj = static_cast<G4Trajectory*>((*trajectory)[i]);
+            trj->DrawTrajectory();
+        }
+    }
 }
 
 void EventAction::AddEnergyDeposit(G4double edep)
 {
-    fEnergyDeposit += edep;
+    fEdep += edep;
 }
