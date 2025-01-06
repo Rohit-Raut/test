@@ -10,6 +10,8 @@ add_executable(GEANT4
     src/DetectorConstruction.cc
     src/PhysicsList.cc
     src/PrimaryGeneratorAction.cc
+    src/EventAction.cc
+    src/HistoManager.cc
     main.cc
 )
 

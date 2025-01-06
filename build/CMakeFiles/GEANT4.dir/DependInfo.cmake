@@ -10,6 +10,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/rohit/Research/Bismuth_sim/Purity_Geant4/main.cc" "CMakeFiles/GEANT4.dir/main.cc.o" "gcc" "CMakeFiles/GEANT4.dir/main.cc.o.d"
   "/Users/rohit/Research/Bismuth_sim/Purity_Geant4/src/DetectorConstruction.cc" "CMakeFiles/GEANT4.dir/src/DetectorConstruction.cc.o" "gcc" "CMakeFiles/GEANT4.dir/src/DetectorConstruction.cc.o.d"
+  "/Users/rohit/Research/Bismuth_sim/Purity_Geant4/src/EventAction.cc" "CMakeFiles/GEANT4.dir/src/EventAction.cc.o" "gcc" "CMakeFiles/GEANT4.dir/src/EventAction.cc.o.d"
+  "/Users/rohit/Research/Bismuth_sim/Purity_Geant4/src/HistoManager.cc" "CMakeFiles/GEANT4.dir/src/HistoManager.cc.o" "gcc" "CMakeFiles/GEANT4.dir/src/HistoManager.cc.o.d"
   "/Users/rohit/Research/Bismuth_sim/Purity_Geant4/src/PhysicsList.cc" "CMakeFiles/GEANT4.dir/src/PhysicsList.cc.o" "gcc" "CMakeFiles/GEANT4.dir/src/PhysicsList.cc.o.d"
   "/Users/rohit/Research/Bismuth_sim/Purity_Geant4/src/PrimaryGeneratorAction.cc" "CMakeFiles/GEANT4.dir/src/PrimaryGeneratorAction.cc.o" "gcc" "CMakeFiles/GEANT4.dir/src/PrimaryGeneratorAction.cc.o.d"
   )

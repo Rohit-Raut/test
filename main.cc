@@ -56,7 +56,7 @@ int main(int argc, char** argv)
     runManager->SetUserAction(new PrimaryGeneratorAction);
 
     HistoManager* histo = new HistoManager;
-
+    histo->OpenFile("myOutputFile");
     auto eventAction = new EventAction(histo);
     runManager->SetUserAction(eventAction);
 
@@ -67,9 +67,10 @@ int main(int argc, char** argv)
     G4UImanager* UImanager = G4UImanager::GetUIpointer();
     UImanager->ApplyCommand("/control/execute /Users/rohit/Research/Bismuth_sim/Purity_Geant4/vis.mac");
     ui->SessionStart();
+    histo->Save();
+    delete histo;
     delete ui;
     delete visManager;
-    delete histo;
     delete runManager;
     return 0;
 }

@@ -177,6 +177,54 @@ src/DetectorConstruction.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GEANT4.dir/build.make CMakeFiles/GEANT4.dir/src/DetectorConstruction.cc.s
 .PHONY : src/DetectorConstruction.cc.s
 
+src/EventAction.o: src/EventAction.cc.o
+.PHONY : src/EventAction.o
+
+# target to build an object file
+src/EventAction.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GEANT4.dir/build.make CMakeFiles/GEANT4.dir/src/EventAction.cc.o
+.PHONY : src/EventAction.cc.o
+
+src/EventAction.i: src/EventAction.cc.i
+.PHONY : src/EventAction.i
+
+# target to preprocess a source file
+src/EventAction.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GEANT4.dir/build.make CMakeFiles/GEANT4.dir/src/EventAction.cc.i
+.PHONY : src/EventAction.cc.i
+
+src/EventAction.s: src/EventAction.cc.s
+.PHONY : src/EventAction.s
+
+# target to generate assembly for a file
+src/EventAction.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GEANT4.dir/build.make CMakeFiles/GEANT4.dir/src/EventAction.cc.s
+.PHONY : src/EventAction.cc.s
+
+src/HistoManager.o: src/HistoManager.cc.o
+.PHONY : src/HistoManager.o
+
+# target to build an object file
+src/HistoManager.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GEANT4.dir/build.make CMakeFiles/GEANT4.dir/src/HistoManager.cc.o
+.PHONY : src/HistoManager.cc.o
+
+src/HistoManager.i: src/HistoManager.cc.i
+.PHONY : src/HistoManager.i
+
+# target to preprocess a source file
+src/HistoManager.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GEANT4.dir/build.make CMakeFiles/GEANT4.dir/src/HistoManager.cc.i
+.PHONY : src/HistoManager.cc.i
+
+src/HistoManager.s: src/HistoManager.cc.s
+.PHONY : src/HistoManager.s
+
+# target to generate assembly for a file
+src/HistoManager.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GEANT4.dir/build.make CMakeFiles/GEANT4.dir/src/HistoManager.cc.s
+.PHONY : src/HistoManager.cc.s
+
 src/PhysicsList.o: src/PhysicsList.cc.o
 .PHONY : src/PhysicsList.o
 
@@ -240,6 +288,12 @@ help:
 	@echo "... src/DetectorConstruction.o"
 	@echo "... src/DetectorConstruction.i"
 	@echo "... src/DetectorConstruction.s"
+	@echo "... src/EventAction.o"
+	@echo "... src/EventAction.i"
+	@echo "... src/EventAction.s"
+	@echo "... src/HistoManager.o"
+	@echo "... src/HistoManager.i"
+	@echo "... src/HistoManager.s"
 	@echo "... src/PhysicsList.o"
 	@echo "... src/PhysicsList.i"
 	@echo "... src/PhysicsList.s"

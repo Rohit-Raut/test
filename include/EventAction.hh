@@ -2,14 +2,14 @@
 #define EventAction_h 1
 
 
-#include "G4VUserEventAction.hh"
+#include "G4UserEventAction.hh"
 #include "G4String.hh"
 #include "globals.hh"
 
 class HistoManager;
 class G4Event;
 
-class EventAction : public G4VUserEventAction
+class EventAction : public G4UserEventAction
 {
     public:
         EventAction(HistoManager* histo);

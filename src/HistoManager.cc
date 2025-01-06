@@ -1,17 +1,21 @@
 #include "HistoManager.hh"
 #include "G4SystemOfUnits.hh"
-#include "G4AnalysisManager.hh"
+#include "G4GenericAnalysisManager.hh"
 #include "G4UnitsTable.hh"
 
-HistoManager::HistoManager()
+HistoManager::HistoManager(): fFilename("decay_chain")
 {
     Book();
 }
+HistoManager::~HistoManager()
+{
+    delete G4GenericAnalysisManager::Instance();
+}
+
 
 void HistoManager::Book()
 {
-    G4String fFilename = "decay_chain";
-    G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();
+    G4GenericAnalysisManager* analysisManager = G4GenericAnalysisManager::Instance();
     analysisManager->SetDefaultFileType("root");
     analysisManager->SetFileName(fFilename);
     analysisManager->SetVerboseLevel(1);
@@ -38,6 +42,27 @@ void HistoManager::Book()
     for (G4int k = 1; k < KMaxHisto; k++)
     {
         G4int ih = analysisManager->CreateH1(id[k], title[k], nbins, vmin, vmax);
-        analysisManager->SetH1Activation(ih, false);
+        analysisManager->SetH1Activation(ih, true);
     }
+}
+
+void HistoManager::OpenFile(const G4String& filename)
+{
+    G4GenericAnalysisManager* analysisManager = G4GenericAnalysisManager::Instance();
+    analysisManager->OpenFile(filename);
+}
+
+
+void HistoManager::Save()
+{
+    G4GenericAnalysisManager* analysisManager = G4GenericAnalysisManager::Instance();
+    analysisManager->Write();
+    analysisManager->CloseFile();
+}
+
+
+void HistoManager::FillH1(G4int ih, G4double xvalue, G4double weight)
+{
+    G4GenericAnalysisManager* analysisManager = G4GenericAnalysisManager::Instance();
+    analysisManager->FillH1(ih, xvalue, weight);
 }
