@@ -15,9 +15,13 @@
 #include <G4Isotope.hh>
 #include <G4Element.hh>
 #include <G4Material.hh>
+
+
+
 #include <G4UniformElectricField.hh>
 #include <G4FieldManager.hh>
 #include <G4ChordFinder.hh>
+#include <G4MagIntegratorDriver.hh>
 #include <G4EqMagElectricField.hh>
 #include <G4ClassicalRK4.hh>
 
@@ -26,9 +30,11 @@ DetectorConstruction::DetectorConstruction()
 : G4VUserDetectorConstruction(),
     fInnerRadius(1.50 * cm),
     fOuterRadius(3.0 * cm),
-    fDriftLength(18.0 * cm)
-{
-}
+    fDriftLength(18.0 * cm),
+    fLogicActive(nullptr),
+    fFieldMgr(nullptr),
+    fChordFinder(nullptr)
+{}
 
 DetectorConstruction::~DetectorConstruction(){}
 
@@ -55,10 +61,10 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
     G4Tubs* solidWorld = new G4Tubs("World", 0., worldRadius, 0.5* worldLength, 0., 360. * deg);
     G4LogicalVolume* logicWorld = new G4LogicalVolume(solidWorld, matLar, "World");
     G4VPhysicalVolume* physWorld = new G4PVPlacement(nullptr, G4ThreeVector(), logicWorld, "World", nullptr, false, 0);
-     //this is for LAr
+     //this is for ActiveLAr
     G4Tubs* solidActive = new G4Tubs("ActiveLar",0.0, fOuterRadius, 0.5 * fDriftLength, 0. , 360. * deg);
-    G4LogicalVolume* logicActive = new G4LogicalVolume(solidActive, matLar, "ActiveLar");
-    new G4PVPlacement(nullptr, G4ThreeVector(), logicActive, "ActiveLar", logicWorld, false, 0);
+    fLogicActive = new G4LogicalVolume(solidActive, matLar, "ActiveLar");
+    new G4PVPlacement(nullptr, G4ThreeVector(), fLogicActive, "ActiveLar", logicWorld, false, 0);
 
 
     //Here lets create a anode region
@@ -105,7 +111,7 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
 
     logicWorld->SetVisAttributes(G4VisAttributes::GetInvisible());
     G4VisAttributes* visAttrActive = new G4VisAttributes(G4Colour(0.0, 0.8,1.0, 0.3));
-    logicActive->SetVisAttributes(visAttrActive);
+    fLogicActive->SetVisAttributes(visAttrActive);
 
     G4VisAttributes* innerDiskVis = new G4VisAttributes(G4Colour(0.0, 0.0,1.0, 0.6));
     logicInnerDisk->SetVisAttributes(innerDiskVis);
@@ -124,4 +130,36 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
 
     return physWorld;
 
+}
+
+
+void DetectorConstruction::ConstructSDandField()
+{
+    static bool fieldIsInitialized = false;
+    if(fieldIsInitialized)
+    {
+        return;
+    }
+    fieldIsInitialized = true;
+
+    G4ThreeVector fieldValue(0.,0.,5.0*volt/cm);
+    auto uniformEField = new G4UniformElectricField(fieldValue);
+    auto equation = new G4EqMagElectricField(uniformEField);
+    G4int nvar = 8;
+    auto stepper = new G4ClassicalRK4(equation, nvar);
+
+    auto pIntegrationDriver = new G4MagInt_Driver(1.0e-2 * mm, stepper, stepper->GetNumberOfVariables());
+    fChordFinder = new G4ChordFinder(pIntegrationDriver);
+
+    fFieldMgr = new G4FieldManager();
+    fFieldMgr->SetDetectorField(uniformEField);
+    fFieldMgr->SetChordFinder(fChordFinder);
+
+    if (fLogicActive)
+    {
+        fLogicActive->SetFieldManager(fFieldMgr, true);
+    }
+    else{
+        G4ExceptionDescription msg;
+    }
 }
