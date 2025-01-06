@@ -6,13 +6,17 @@
 #include "G4RunManager.hh"
 #include"G4Track.hh"
 #include "G4UnitsTable.hh"
-#include "ParticleType.hh"
 
-SteppingAction::SteppingAction(EventAction* eventAction): G4UserSteppingAction, fEvents(eventAction)
+SteppingAction::SteppingAction(EventAction* eventAction): G4UserSteppingAction(), fEvents(eventAction)
 {}
 SteppingAction::~SteppingAction()
 {}  
 
-void SteppingAction::UserSteppingAction(const G4Track* track)
+void SteppingAction::UserSteppingAction(const G4Step* step)
 {
+    G4double edep = step->GetTotalEnergyDeposit();
+    if (edep > 0.)
+    {
+        fEvents->AddEnergyDeposit(edep);
+    }
 }

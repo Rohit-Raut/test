@@ -46,19 +46,29 @@
 #include "include/PrimaryGeneratorAction.hh"
 #include "include/EventAction.hh"
 #include "include/HistoManager.hh"
+#include "include/RunAction.hh"
+#include "include/SteppingAction.hh"
 
 int main(int argc, char** argv)
 {
     G4RunManager* runManager = new G4RunManager;
     runManager->SetUserInitialization(new DetectorConstruction);
     runManager->SetUserInitialization(new PhysicsList);
-    //runManager->SetUserInitialization(new QGSP_BERT);
     runManager->SetUserAction(new PrimaryGeneratorAction);
 
     HistoManager* histo = new HistoManager;
-    histo->OpenFile("myOutputFile");
+    
+    auto runAction = new RunAction(histo);
+    runManager->SetUserAction(runAction);
+
     auto eventAction = new EventAction(histo);
     runManager->SetUserAction(eventAction);
+
+    auto steppingAction = new SteppingAction(eventAction);
+    runManager->SetUserAction(steppingAction);
+
+    auto primaryGeneratorAction = new PrimaryGeneratorAction;
+    runManager->SetUserAction(primaryGeneratorAction);
 
     G4VisManager* visManager = new G4VisExecutive;
     visManager->Initialize();
@@ -67,7 +77,6 @@ int main(int argc, char** argv)
     G4UImanager* UImanager = G4UImanager::GetUIpointer();
     UImanager->ApplyCommand("/control/execute /Users/rohit/Research/Bismuth_sim/Purity_Geant4/vis.mac");
     ui->SessionStart();
-    histo->Save();
     delete histo;
     delete ui;
     delete visManager;

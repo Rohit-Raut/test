@@ -5,16 +5,17 @@
 #include "globals.hh"
 
 class EventAction;
+class G4Step;
 
 class SteppingAction: public G4UserSteppingAction
 {
 public:
-    SteppingAction();
+    SteppingAction(EventAction* eventAction);
     virtual ~SteppingAction();
-    virtual void UserSteppingAction(const G4Track* track) override;
+    virtual void UserSteppingAction(const G4Step* Step) override;
 
 private:
-    EventAction* fEventAction;
+    EventAction* fEvents;
 };
 
 #endif

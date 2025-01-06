@@ -11,6 +11,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/GEANT4.dir/src/PhysicsList.cc.o.d"
   "CMakeFiles/GEANT4.dir/src/PrimaryGeneratorAction.cc.o"
   "CMakeFiles/GEANT4.dir/src/PrimaryGeneratorAction.cc.o.d"
+  "CMakeFiles/GEANT4.dir/src/RunAction.cc.o"
+  "CMakeFiles/GEANT4.dir/src/RunAction.cc.o.d"
+  "CMakeFiles/GEANT4.dir/src/SteppingAction.cc.o"
+  "CMakeFiles/GEANT4.dir/src/SteppingAction.cc.o.d"
   "bin/GEANT4"
   "bin/GEANT4.pdb"
 )

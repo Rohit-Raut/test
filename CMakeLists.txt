@@ -12,6 +12,8 @@ add_executable(GEANT4
     src/PrimaryGeneratorAction.cc
     src/EventAction.cc
     src/HistoManager.cc
+    src/RunAction.cc
+    src/SteppingAction.cc
     main.cc
 )
 

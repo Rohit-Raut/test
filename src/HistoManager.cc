@@ -24,7 +24,7 @@ void HistoManager::Book()
     const G4int KMaxHisto = 10;
     const G4String id[] = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
     const G4String title[] = {
-        "dummy",  // 0
+        "Particle Tracking",  // 0
         "energy spectrum (%): e+ e-",  // 1
         "energy spectrum (%): nu_e anti_nu_e",  // 2
         "energy spectrum (%): gamma",  // 3

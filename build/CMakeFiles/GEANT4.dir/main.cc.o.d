@@ -1430,4 +1430,7 @@ CMakeFiles/GEANT4.dir/main.cc.o: \
   /Users/rohit/Research/Bismuth_sim/Purity_Geant4/include/EventAction.hh \
   /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4UserEventAction.hh \
   /Users/rohit/Research/Bismuth_sim/Purity_Geant4/include/HistoManager.hh \
-  /Users/rohit/geant4-v11.3.0-install/include/Geant4/Globals.hh
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/Globals.hh \
+  /Users/rohit/Research/Bismuth_sim/Purity_Geant4/include/RunAction.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4UserRunAction.hh \
+  /Users/rohit/Research/Bismuth_sim/Purity_Geant4/include/SteppingAction.hh
