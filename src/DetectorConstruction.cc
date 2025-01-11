@@ -30,7 +30,7 @@ DetectorConstruction::DetectorConstruction()
 : G4VUserDetectorConstruction(),
     fInnerRadius(1.50 * cm),
     fOuterRadius(3.0 * cm),
-    fDriftLength(18.0 * cm),
+    fDriftLength(6.5 * cm),
     fLogicActive(nullptr),
     fFieldMgr(nullptr),
     fChordFinder(nullptr)

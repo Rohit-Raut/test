@@ -21,7 +21,7 @@ G4ParticleDefinition* GetBi207()
 PrimaryGeneratorAction::PrimaryGeneratorAction()
 {
     particleSource = new G4GeneralParticleSource();
-    particleSource->SetNumberOfParticles(10);
+    particleSource->SetNumberOfParticles(37000);
     particleSource->GetCurrentSource()->GetEneDist()->SetMonoEnergy(0.0*MeV);
     particleSource->GetCurrentSource()->GetAngDist()->SetAngDistType("iso");
     //Later on change this to 37000
