@@ -17,10 +17,12 @@ class EventAction : public G4UserEventAction
         virtual void BeginOfEventAction(const G4Event*);
         virtual void EndOfEventAction(const G4Event*);
         void AddEnergyDeposit(G4double edep);
+        void AddSecondary(G4double eSec);
     private:
         HistoManager* fHistoManager;
         G4String fDecayChain;
         G4double fEdep;
+        std::vector<G4double> fSecEnergies; 
 };
 
 #endif

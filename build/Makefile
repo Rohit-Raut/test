@@ -153,6 +153,30 @@ main.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GEANT4.dir/build.make CMakeFiles/GEANT4.dir/main.cc.s
 .PHONY : main.cc.s
 
+src/AnodeSD.o: src/AnodeSD.cc.o
+.PHONY : src/AnodeSD.o
+
+# target to build an object file
+src/AnodeSD.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GEANT4.dir/build.make CMakeFiles/GEANT4.dir/src/AnodeSD.cc.o
+.PHONY : src/AnodeSD.cc.o
+
+src/AnodeSD.i: src/AnodeSD.cc.i
+.PHONY : src/AnodeSD.i
+
+# target to preprocess a source file
+src/AnodeSD.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GEANT4.dir/build.make CMakeFiles/GEANT4.dir/src/AnodeSD.cc.i
+.PHONY : src/AnodeSD.cc.i
+
+src/AnodeSD.s: src/AnodeSD.cc.s
+.PHONY : src/AnodeSD.s
+
+# target to generate assembly for a file
+src/AnodeSD.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GEANT4.dir/build.make CMakeFiles/GEANT4.dir/src/AnodeSD.cc.s
+.PHONY : src/AnodeSD.cc.s
+
 src/DetectorConstruction.o: src/DetectorConstruction.cc.o
 .PHONY : src/DetectorConstruction.o
 
@@ -321,6 +345,30 @@ src/SteppingAction.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GEANT4.dir/build.make CMakeFiles/GEANT4.dir/src/SteppingAction.cc.s
 .PHONY : src/SteppingAction.cc.s
 
+src/TrackingAction.o: src/TrackingAction.cc.o
+.PHONY : src/TrackingAction.o
+
+# target to build an object file
+src/TrackingAction.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GEANT4.dir/build.make CMakeFiles/GEANT4.dir/src/TrackingAction.cc.o
+.PHONY : src/TrackingAction.cc.o
+
+src/TrackingAction.i: src/TrackingAction.cc.i
+.PHONY : src/TrackingAction.i
+
+# target to preprocess a source file
+src/TrackingAction.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GEANT4.dir/build.make CMakeFiles/GEANT4.dir/src/TrackingAction.cc.i
+.PHONY : src/TrackingAction.cc.i
+
+src/TrackingAction.s: src/TrackingAction.cc.s
+.PHONY : src/TrackingAction.s
+
+# target to generate assembly for a file
+src/TrackingAction.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GEANT4.dir/build.make CMakeFiles/GEANT4.dir/src/TrackingAction.cc.s
+.PHONY : src/TrackingAction.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -333,6 +381,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/AnodeSD.o"
+	@echo "... src/AnodeSD.i"
+	@echo "... src/AnodeSD.s"
 	@echo "... src/DetectorConstruction.o"
 	@echo "... src/DetectorConstruction.i"
 	@echo "... src/DetectorConstruction.s"
@@ -354,6 +405,9 @@ help:
 	@echo "... src/SteppingAction.o"
 	@echo "... src/SteppingAction.i"
 	@echo "... src/SteppingAction.s"
+	@echo "... src/TrackingAction.o"
+	@echo "... src/TrackingAction.i"
+	@echo "... src/TrackingAction.s"
 .PHONY : help
 
 

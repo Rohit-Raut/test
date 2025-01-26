@@ -54,7 +54,7 @@ int main(int argc, char** argv)
     G4RunManager* runManager = new G4RunManager;
     runManager->SetUserInitialization(new DetectorConstruction);
     runManager->SetUserInitialization(new PhysicsList);
-    runManager->SetUserAction(new PrimaryGeneratorAction);
+    runManager->SetUserAction(new TrackingAction);
 
     HistoManager* histo = new HistoManager;
     
@@ -75,11 +75,16 @@ int main(int argc, char** argv)
 
     G4UIExecutive* ui = new G4UIExecutive(argc, argv);
     G4UImanager* UImanager = G4UImanager::GetUIpointer();
-    UImanager->ApplyCommand("/control/execute /Users/rohit/Research/Bismuth_sim/Purity_Geant4/vis.mac");
+    //UImanager->ApplyCommand("/control/execute /Users/rohit/Research/Bismuth_sim/Purity_Geant4/vis.mac");
+    UImanager->ApplyCommand("/control/execute /Users/rohit/Research/Bismuth_sim/Purity_Geant4/build/run1.mac");
     ui->SessionStart();
-    delete histo;
     delete ui;
     delete visManager;
+    // delete runAction;
+    // delete eventAction;
+    // delete steppingAction;
+    // delete primaryGeneratorAction;
     delete runManager;
+    //delete histo;
     return 0;
 }

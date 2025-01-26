@@ -18,6 +18,10 @@ void EventAction::BeginOfEventAction(const G4Event*)
     fDecayChain = G4String("");
     fEdep = 0.;
 }
+void EventAction::AddSecondary(G4double secE)
+{
+    fSecEnergies.push_back(secE);
+}
 
 void EventAction::EndOfEventAction(const G4Event* event)
 {

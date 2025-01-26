@@ -24,6 +24,8 @@ class DetectorConstruction : public G4VUserDetectorConstruction
         G4double fOuterRadius;
         G4double fDriftLength;
         G4LogicalVolume* fLogicActive;
+        G4LogicalVolume* fLogicInnerDisk;
+        G4LogicalVolume* fLogicOuterDisk;
         G4FieldManager* fFieldMgr;
         G4ChordFinder* fChordFinder;
 };

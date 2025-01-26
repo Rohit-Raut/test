@@ -12,5 +12,6 @@ class PrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
         virtual void GeneratePrimaries(G4Event* anEvent);
     private:
         G4GeneralParticleSource* particleSource;
+	G4double gamma_energy;
 };
 #endif

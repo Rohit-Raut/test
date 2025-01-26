@@ -21,7 +21,7 @@ void HistoManager::Book()
     analysisManager->SetVerboseLevel(1);
     analysisManager->SetActivation(true);
 
-    const G4int KMaxHisto = 10;
+    const G4int KMaxHisto = 20 ;
     const G4String id[] = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
     const G4String title[] = {
         "Particle Tracking",  // 0
@@ -38,8 +38,8 @@ void HistoManager::Book()
 
     G4int nbins = 100;
     G4double vmin = 0.;
-    G4double vmax = 2000.;
-    for (G4int k = 1; k < KMaxHisto; k++)
+    G4double vmax = 5000.;
+    for (G4int k = 0; k < KMaxHisto; k++)
     {
         G4int ih = analysisManager->CreateH1(id[k], title[k], nbins, vmin, vmax);
         analysisManager->SetH1Activation(ih, true);

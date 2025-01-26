@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/GEANT4.dir/main.cc.o"
   "CMakeFiles/GEANT4.dir/main.cc.o.d"
+  "CMakeFiles/GEANT4.dir/src/AnodeSD.cc.o"
+  "CMakeFiles/GEANT4.dir/src/AnodeSD.cc.o.d"
   "CMakeFiles/GEANT4.dir/src/DetectorConstruction.cc.o"
   "CMakeFiles/GEANT4.dir/src/DetectorConstruction.cc.o.d"
   "CMakeFiles/GEANT4.dir/src/EventAction.cc.o"
@@ -15,6 +17,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/GEANT4.dir/src/RunAction.cc.o.d"
   "CMakeFiles/GEANT4.dir/src/SteppingAction.cc.o"
   "CMakeFiles/GEANT4.dir/src/SteppingAction.cc.o.d"
+  "CMakeFiles/GEANT4.dir/src/TrackingAction.cc.o"
+  "CMakeFiles/GEANT4.dir/src/TrackingAction.cc.o.d"
   "bin/GEANT4"
   "bin/GEANT4.pdb"
 )

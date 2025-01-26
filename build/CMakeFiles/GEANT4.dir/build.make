@@ -167,10 +167,38 @@ CMakeFiles/GEANT4.dir/src/SteppingAction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GEANT4.dir/src/SteppingAction.cc.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/rohit/Research/Bismuth_sim/Purity_Geant4/src/SteppingAction.cc -o CMakeFiles/GEANT4.dir/src/SteppingAction.cc.s
 
+CMakeFiles/GEANT4.dir/src/AnodeSD.cc.o: CMakeFiles/GEANT4.dir/flags.make
+CMakeFiles/GEANT4.dir/src/AnodeSD.cc.o: /Users/rohit/Research/Bismuth_sim/Purity_Geant4/src/AnodeSD.cc
+CMakeFiles/GEANT4.dir/src/AnodeSD.cc.o: CMakeFiles/GEANT4.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/rohit/Research/Bismuth_sim/Purity_Geant4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/GEANT4.dir/src/AnodeSD.cc.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GEANT4.dir/src/AnodeSD.cc.o -MF CMakeFiles/GEANT4.dir/src/AnodeSD.cc.o.d -o CMakeFiles/GEANT4.dir/src/AnodeSD.cc.o -c /Users/rohit/Research/Bismuth_sim/Purity_Geant4/src/AnodeSD.cc
+
+CMakeFiles/GEANT4.dir/src/AnodeSD.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GEANT4.dir/src/AnodeSD.cc.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/rohit/Research/Bismuth_sim/Purity_Geant4/src/AnodeSD.cc > CMakeFiles/GEANT4.dir/src/AnodeSD.cc.i
+
+CMakeFiles/GEANT4.dir/src/AnodeSD.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GEANT4.dir/src/AnodeSD.cc.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/rohit/Research/Bismuth_sim/Purity_Geant4/src/AnodeSD.cc -o CMakeFiles/GEANT4.dir/src/AnodeSD.cc.s
+
+CMakeFiles/GEANT4.dir/src/TrackingAction.cc.o: CMakeFiles/GEANT4.dir/flags.make
+CMakeFiles/GEANT4.dir/src/TrackingAction.cc.o: /Users/rohit/Research/Bismuth_sim/Purity_Geant4/src/TrackingAction.cc
+CMakeFiles/GEANT4.dir/src/TrackingAction.cc.o: CMakeFiles/GEANT4.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/rohit/Research/Bismuth_sim/Purity_Geant4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/GEANT4.dir/src/TrackingAction.cc.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GEANT4.dir/src/TrackingAction.cc.o -MF CMakeFiles/GEANT4.dir/src/TrackingAction.cc.o.d -o CMakeFiles/GEANT4.dir/src/TrackingAction.cc.o -c /Users/rohit/Research/Bismuth_sim/Purity_Geant4/src/TrackingAction.cc
+
+CMakeFiles/GEANT4.dir/src/TrackingAction.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GEANT4.dir/src/TrackingAction.cc.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/rohit/Research/Bismuth_sim/Purity_Geant4/src/TrackingAction.cc > CMakeFiles/GEANT4.dir/src/TrackingAction.cc.i
+
+CMakeFiles/GEANT4.dir/src/TrackingAction.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GEANT4.dir/src/TrackingAction.cc.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/rohit/Research/Bismuth_sim/Purity_Geant4/src/TrackingAction.cc -o CMakeFiles/GEANT4.dir/src/TrackingAction.cc.s
+
 CMakeFiles/GEANT4.dir/main.cc.o: CMakeFiles/GEANT4.dir/flags.make
 CMakeFiles/GEANT4.dir/main.cc.o: /Users/rohit/Research/Bismuth_sim/Purity_Geant4/main.cc
 CMakeFiles/GEANT4.dir/main.cc.o: CMakeFiles/GEANT4.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/rohit/Research/Bismuth_sim/Purity_Geant4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/GEANT4.dir/main.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/rohit/Research/Bismuth_sim/Purity_Geant4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/GEANT4.dir/main.cc.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GEANT4.dir/main.cc.o -MF CMakeFiles/GEANT4.dir/main.cc.o.d -o CMakeFiles/GEANT4.dir/main.cc.o -c /Users/rohit/Research/Bismuth_sim/Purity_Geant4/main.cc
 
 CMakeFiles/GEANT4.dir/main.cc.i: cmake_force
@@ -190,6 +218,8 @@ GEANT4_OBJECTS = \
 "CMakeFiles/GEANT4.dir/src/HistoManager.cc.o" \
 "CMakeFiles/GEANT4.dir/src/RunAction.cc.o" \
 "CMakeFiles/GEANT4.dir/src/SteppingAction.cc.o" \
+"CMakeFiles/GEANT4.dir/src/AnodeSD.cc.o" \
+"CMakeFiles/GEANT4.dir/src/TrackingAction.cc.o" \
 "CMakeFiles/GEANT4.dir/main.cc.o"
 
 # External object files for target GEANT4
@@ -202,6 +232,8 @@ bin/GEANT4: CMakeFiles/GEANT4.dir/src/EventAction.cc.o
 bin/GEANT4: CMakeFiles/GEANT4.dir/src/HistoManager.cc.o
 bin/GEANT4: CMakeFiles/GEANT4.dir/src/RunAction.cc.o
 bin/GEANT4: CMakeFiles/GEANT4.dir/src/SteppingAction.cc.o
+bin/GEANT4: CMakeFiles/GEANT4.dir/src/AnodeSD.cc.o
+bin/GEANT4: CMakeFiles/GEANT4.dir/src/TrackingAction.cc.o
 bin/GEANT4: CMakeFiles/GEANT4.dir/main.cc.o
 bin/GEANT4: CMakeFiles/GEANT4.dir/build.make
 bin/GEANT4: /Users/rohit/geant4-v11.3.0-install/lib/libG4Tree.dylib
@@ -245,7 +277,7 @@ bin/GEANT4: /Users/rohit/geant4-v11.3.0-install/lib/libG4global.dylib
 bin/GEANT4: /Users/rohit/geant4-v11.3.0-install/lib/libG4clhep.dylib
 bin/GEANT4: /Users/rohit/geant4-v11.3.0-install/lib/libG4ptl.3.0.0.dylib
 bin/GEANT4: CMakeFiles/GEANT4.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/rohit/Research/Bismuth_sim/Purity_Geant4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable bin/GEANT4"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/rohit/Research/Bismuth_sim/Purity_Geant4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable bin/GEANT4"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GEANT4.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -14,6 +14,8 @@ add_executable(GEANT4
     src/HistoManager.cc
     src/RunAction.cc
     src/SteppingAction.cc
+    src/AnodeSD.cc
+    src/TrackingAction.cc
     main.cc
 )
 

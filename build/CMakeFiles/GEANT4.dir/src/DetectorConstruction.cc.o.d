@@ -1119,6 +1119,53 @@ CMakeFiles/GEANT4.dir/src/DetectorConstruction.cc.o: \
   /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4Colour.hh \
   /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4Color.hh \
   /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4VisAttributes.icc \
+  /Users/rohit/Research/Bismuth_sim/Purity_Geant4/include/AnodeSD.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4VSensitiveDetector.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4CollectionNameVector.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4HCofThisEvent.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4Allocator.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4AllocatorPool.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4VHitsCollection.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4Step.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4StepPoint.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4SteppingControl.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4StepStatus.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4TouchableHandle.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4VTouchable.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4TouchableHistory.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4NavigationHistory.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4AffineTransform.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4AffineTransform.icc \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4NavigationLevel.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4NavigationLevelRep.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4NavigationLevelRep.icc \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4NavigationLevel.icc \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4NavigationHistoryPool.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4NavigationHistory.icc \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4TouchableHistory.icc \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4ReferenceCountedHandle.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4StepPoint.icc \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4TrackVector.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4Step.icc \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4Track.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/trkdefs.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4DynamicParticle.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4ElectronOccupancy.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/pwdefs.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4LorentzVector.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4ParticleDefinition.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4PDefManager.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4ParticleDefinition.icc \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4ParticleMomentum.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4DynamicParticle.icc \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4TrackStatus.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4VUserTrackInformation.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4PhysicsModelCatalog.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4Track.icc \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4VHit.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4VReadOutGeometry.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4SensitiveVolumeList.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4VSDFilter.hh \
   /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4UniformElectricField.hh \
   /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4ElectricField.hh \
   /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4ElectroMagneticField.hh \
@@ -1149,4 +1196,7 @@ CMakeFiles/GEANT4.dir/src/DetectorConstruction.cc.o: \
   /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4ClassicalRK4.hh \
   /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4MagErrorStepper.hh \
   /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4Mag_EqRhs.hh \
-  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4MagErrorStepper.icc
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4MagErrorStepper.icc \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4SDManager.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4HCtable.hh \
+  /Users/rohit/geant4-v11.3.0-install/include/Geant4/G4SDStructure.hh

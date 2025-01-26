@@ -17,13 +17,14 @@
 #include <G4Material.hh>
 
 
-
+#include <AnodeSD.hh>
 #include <G4UniformElectricField.hh>
 #include <G4FieldManager.hh>
 #include <G4ChordFinder.hh>
 #include <G4MagIntegratorDriver.hh>
 #include <G4EqMagElectricField.hh>
 #include <G4ClassicalRK4.hh>
+#include <G4SDManager.hh>
 
 
 DetectorConstruction::DetectorConstruction()
@@ -75,12 +76,12 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
     G4Tubs* solidInnerDisk = new G4Tubs("InnerDisk", 0., fInnerRadius, 0.5 * anodeThickness, 0., 360. * deg);
     G4LogicalVolume* logicInnerDisk = new G4LogicalVolume(solidInnerDisk, matAnode, "InnerDisk");
     new G4PVPlacement(nullptr, G4ThreeVector(0., 0., zPosAnode), logicInnerDisk, "InnerDisk", logicWorld, false, 0);
-
+    fLogicInnerDisk = logicInnerDisk;
     //OuterDisk anode
     G4Tubs* solidOuterDisk = new G4Tubs("OuterDisk", fInnerRadius, fOuterRadius, 0.5 * anodeThickness, 0., 360. * deg);
     G4LogicalVolume* logicOuterDisk = new G4LogicalVolume(solidOuterDisk, matAnode, "OuterDisk");
     new G4PVPlacement(nullptr, G4ThreeVector(0., 0., zPosAnode), logicOuterDisk, "OuterDisk", logicWorld, false, 0);
-
+    fLogicOuterDisk = logicOuterDisk;
 
     //cathode place to encapsulate the Bismuth with solid titanium
     G4Material* matTi = nist->FindOrBuildMaterial("G4_Ti");
@@ -141,7 +142,7 @@ void DetectorConstruction::ConstructSDandField()
         return;
     }
     fieldIsInitialized = true;
-
+    //this was created to generate the uniform electric field given by fieldValue
     G4ThreeVector fieldValue(0.,0.,5.0*volt/cm);
     auto uniformEField = new G4UniformElectricField(fieldValue);
     auto equation = new G4EqMagElectricField(uniformEField);
@@ -162,4 +163,13 @@ void DetectorConstruction::ConstructSDandField()
     else{
         G4ExceptionDescription msg;
     }
+    G4SDManager* sdManager = G4SDManager::GetSDMpointer();
+    AnodeSD* anodeSD = new AnodeSD("AnodeSD");
+    sdManager->AddNewDetector(anodeSD);
+
+    fLogicInnerDisk->SetSensitiveDetector(anodeSD);
+    fLogicOuterDisk->SetSensitiveDetector(anodeSD);
+
+
+
 }

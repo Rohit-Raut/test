@@ -27,7 +27,7 @@ PhysicsList::PhysicsList() : G4VModularPhysicsList()
 {
     const G4double meanlife = 1 * nanosecond;
     G4NuclideTable::GetInstance()->SetMeanLifeThreshold(meanlife);
-    G4NuclideTable::GetInstance()->SetLevelTolerance(1.0 * eV);
+    G4NuclideTable::GetInstance()->SetLevelTolerance(10.0 * eV);
     SetDefaultCutValue(1.0 * mm);
 
 }

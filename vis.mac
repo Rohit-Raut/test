@@ -26,6 +26,11 @@
 # Values range from 0 (dark) to 1 (bright)
 /vis/viewer/setBackground 0.9 0.9 0.9
 
+/vis/modeling/trajectories/create/drawByParticleID
+/vis/modeling/trajectories/drawByParticleID-0/default/setDrawStepPts true
+/vis/modeling/trajectories/drawByCharge-0/default/setStepPtsSize 2
+/vis/filtering/trajectories/particleFilter-0/add gamma
+#/vis/filtering/trajectories/particleFilter-0/invert true
 
 #here I am trying to bias the time frame for Bi-207
 /grdm/decayBias on
