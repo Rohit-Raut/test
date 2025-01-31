@@ -14,7 +14,7 @@ public:
     
     virtual void BeginOfRunAction(const G4Run* run) override;
     virtual void EndOfRunAction(const G4Run* run) override;
-
+    HistoManager* GetHistoManager() const{ return fHistoManager; }
 private:
     HistoManager* fHistoManager;
 };

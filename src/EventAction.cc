@@ -25,16 +25,19 @@ void EventAction::AddSecondary(G4double secE)
 
 void EventAction::EndOfEventAction(const G4Event* event)
 {
+    G4cout<<"Debugging here[Event]: "<<event<<G4endl;
+    G4cout<<"Issue at fEdep [fEdep]: "<<fEdep<<G4endl;
     if (fEdep > 0.)
     {
-        fHistoManager->FillH1(0,fEdep);
+        G4cout<<"Debug: EventAction line 30:   "<<fEdep<<G4endl;
+        fHistoManager->FillH1(0,fEdep,1);
     }
     G4int eventID = event->GetEventID();
     G4int printProgress = G4RunManager::GetRunManager()->GetPrintProgress();
 
     if (eventID%printProgress == 0)
     {
-        G4cout << ">>> Event " << eventID << " processed" << G4endl;
+        G4cout << ">>> Event :  " << eventID << "  processed" << G4endl;
     }
     // G4TrajectoryContainer* trajectory= event->GetTrajectoryContainer();
     // if (trajectory)

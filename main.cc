@@ -1,4 +1,4 @@
-//
+
 // ********************************************************************
 // * License and Disclaimer                                           *
 // *                                                                  *
@@ -19,23 +19,19 @@
 // * technical work of the GEANT4 collaboration.                      *
 // * By using,  copying,  modifying or  distributing the software (or *
 // * any work based  on the software)  you  agree  to acknowledge its *
-// * use  in  resulting  scientific  publications,  and indicate your *
-// * acceptance of all terms of the Geant4 Software license.          *
+// * use in  resulting  scientific  publications,  and indicate your *
+// * accepjtance of all terms of the Geant4 Software license.          *
 // ********************************************************************
-//
 ////////////////////////////////////////////////////////////////////////////////
+// GEANT4 Class source file
 //
-//  GEANT4 Class source file
+// G4RadioactiveDecay
 //
-//  G4RadioactiveDecay
-//
-//  Author: R.Raut
-//  Date: 3 Jan 2025  
+// Author: R.Raut
+// Date: 3 Jan 2025  
 //
 //
 ////////////////////////////////////////////////////////////////////////////////
-
-
 #include "G4RunManager.hh"
 #include "G4UImanager.hh"
 #include "G4VisExecutive.hh"
@@ -48,13 +44,23 @@
 #include "include/HistoManager.hh"
 #include "include/RunAction.hh"
 #include "include/SteppingAction.hh"
+#include "include/TrackingAction.hh"
 
 int main(int argc, char** argv)
 {
+    G4cout<<"Debugging Main.cc line 55"<<G4endl;
+
+    const char* radData = std::getenv("G4RADIOACTIVEDATA");
+    if(!radData){
+        G4cout<<"G4RADIOACTIVEDATA not set"<<G4endl;
+    }
+    else{
+        G4cout<<"G4RADIOACTIVEDATA set to"<<radData<<G4endl;
+    }
+
     G4RunManager* runManager = new G4RunManager;
     runManager->SetUserInitialization(new DetectorConstruction);
     runManager->SetUserInitialization(new PhysicsList);
-    runManager->SetUserAction(new TrackingAction);
 
     HistoManager* histo = new HistoManager;
     
@@ -70,21 +76,24 @@ int main(int argc, char** argv)
     auto primaryGeneratorAction = new PrimaryGeneratorAction;
     runManager->SetUserAction(primaryGeneratorAction);
 
-    G4VisManager* visManager = new G4VisExecutive;
-    visManager->Initialize();
+    TrackingAction* trackingAction = new TrackingAction(runAction);
+    runManager->SetUserAction(trackingAction);
 
-    G4UIExecutive* ui = new G4UIExecutive(argc, argv);
+    //G4VisManager* visManager = new G4VisExecutive;
+    //visManager->Initialize();
+
+    //G4UIExecutive* ui = new G4UIExecutive(argc, argv);
     G4UImanager* UImanager = G4UImanager::GetUIpointer();
     //UImanager->ApplyCommand("/control/execute /Users/rohit/Research/Bismuth_sim/Purity_Geant4/vis.mac");
-    UImanager->ApplyCommand("/control/execute /Users/rohit/Research/Bismuth_sim/Purity_Geant4/build/run1.mac");
-    ui->SessionStart();
-    delete ui;
-    delete visManager;
+    UImanager->ApplyCommand("/control/execute /Users/rohit/Research/Bismuth_sim/Purity_Geant4/run1.mac");
+   // ui->SessionStart();
+    //delete ui;
+    //delete visManager;
     // delete runAction;
     // delete eventAction;
     // delete steppingAction;
     // delete primaryGeneratorAction;
     delete runManager;
-    //delete histo;
+    delete histo;
     return 0;
 }

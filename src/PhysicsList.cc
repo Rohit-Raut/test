@@ -52,9 +52,11 @@ void PhysicsList::ConstructParticle()
 
 void PhysicsList::ConstructProcess()
 {
+    G4cout << "DEBUG: PhysicsList::ConstructProcess() start" << G4endl;
     AddTransportation();
 
     //for em
+    G4cout << "DEBUG: Registering EM physics" << G4endl;
     auto emPhysics = new G4EmStandardPhysics();
     emPhysics->ConstructProcess();
 
@@ -64,7 +66,10 @@ void PhysicsList::ConstructProcess()
 
 
     G4RadioactiveDecay* radioactiveDecay = new G4RadioactiveDecay();
-    radioactiveDecay->SetARM(false);
+    radioactiveDecay->SetVerboseLevel(1);
+    radioactiveDecay->SetARM(true);
+    G4PhysicsListHelper::GetPhysicsListHelper()->RegisterProcess(radioactiveDecay, G4GenericIon::GenericIon());
+
     G4LossTableManager* lossManager = G4LossTableManager::Instance();
     G4VAtomDeexcitation* de = lossManager->AtomDeexcitation();
     if (!de)

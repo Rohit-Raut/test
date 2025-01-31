@@ -42,4 +42,4 @@
 /vis/scene/endOfEventAction accumulate
 /vis/scene/add/trajectories
 
-/run/beamOn 10
+/run/beamOn 20000

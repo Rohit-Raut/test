@@ -3,6 +3,9 @@
 
 #include "G4VUserPrimaryGeneratorAction.hh"
 #include "G4GeneralParticleSource.hh"
+#include "G4Event.hh"
+#include "G4ParticleDefinition.hh"
+#include "G4ThreeVector.hh"
 
 class PrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
 {
@@ -12,6 +15,9 @@ class PrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
         virtual void GeneratePrimaries(G4Event* anEvent);
     private:
         G4GeneralParticleSource* particleSource;
-	G4double gamma_energy;
+        G4ParticleDefinition* GetBi207();
+        void Bi207Decay(G4Event* anEvent);
+        G4ThreeVector RandomDirection();
+	    G4double gamma_energy;
 };
 #endif

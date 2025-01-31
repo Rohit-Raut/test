@@ -15,6 +15,7 @@
 #include <G4Isotope.hh>
 #include <G4Element.hh>
 #include <G4Material.hh>
+#include "G4UserLimits.hh"
 
 
 #include <AnodeSD.hh>
@@ -41,6 +42,7 @@ DetectorConstruction::~DetectorConstruction(){}
 
 G4VPhysicalVolume* DetectorConstruction::Construct()
 {
+    G4cout << "DEBUG: Entering DetectorConstruction::Construct()" << G4endl;
     // Get nist material manager
     G4NistManager* nist = G4NistManager::Instance();
     G4Material* matLar = nist->FindOrBuildMaterial("G4_lAr");
@@ -49,12 +51,14 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
     //THis is specifically just for Bismtuh source
     G4int ncomponents, natoms;
     G4double abundance;
-    G4Isotope* Bi207 = new G4Isotope("Bi207", 83, 207, 206.9786 * g/mole);
-    G4Element* Bi = new G4Element("Bismuth", "Bi", 1);
-    Bi->AddIsotope(Bi207, 100.*perCent);
+    G4Isotope* Bi207Element = new G4Isotope("Bi207", 83, 207, 206.9786 * g/mole);
+    G4Element* BiElement = new G4Element("Bismuth", "Bi", 1);
+    BiElement->AddIsotope(Bi207Element, 100.*perCent);
+
+
 
     G4Material* matBi207 = new G4Material("Bismuth", 9.806 * g/cm3, 1);
-    matBi207->AddElement(Bi, 1);
+    matBi207->AddElement(BiElement, 1);
 
     //the dimensions of the volume should be cylindrical
     G4double worldRadius = 4.0 * cm;
@@ -106,8 +110,14 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
     G4Tubs* solidBi207 = new G4Tubs("Bi207Source", 0., biRadius, 0.5 * biThickness, 0., 360. * deg);
     G4LogicalVolume* logicBi207 = new G4LogicalVolume(solidBi207, matBi207, "Bi207Source");
     G4PVPlacement* physBi207 = new G4PVPlacement(nullptr, biPosition, logicBi207, "Bi207Source", logicTiFoil, false, 0, true);
+    //testing with decay, increasing decay limit to force bismuth to decay within 1ns
+    // G4UserLimits* decayLimits = new G4UserLimits();
+    // decayLimits -> SetMaxAllowedTime(1.0*ns);
+    // logicBi207 = SetUserLimits(decayLimits);
+
 
     //for Electrif Field inside the detector
+    G4cout << "DEBUG: Constructing geometry volumes" << G4endl;
 
 
     logicWorld->SetVisAttributes(G4VisAttributes::GetInvisible());
@@ -128,7 +138,7 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
 
     G4VisAttributes* visAttrBi207 = new G4VisAttributes(G4Colour(0.24, 0.23, 0.23,1.0)); 
     logicBi207->SetVisAttributes(visAttrBi207);
-
+    G4cout << "DEBUG: Done with DetectorConstruction::Construct()" << G4endl;
     return physWorld;
 
 }
