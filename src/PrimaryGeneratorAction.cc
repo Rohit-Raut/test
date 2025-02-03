@@ -25,7 +25,7 @@ PrimaryGeneratorAction::PrimaryGeneratorAction()
     particleSource = new G4GeneralParticleSource();
     // particleSource = new G4GeneralParticleSource();
    // G4double randomEnergy = G4UniformRand()*(5000.-0.)+0;
-    particleSource->SetNumberOfParticles(10);
+   // particleSource->SetNumberOfParticles(10);
     // auto energyDist = particleSource->GetCurrentSource()->GetEneDist();
     // energyDist->SetEnergyDisType("Gauss");
     // energyDist->SetMonoEnergy(randomEnergy*keV);
@@ -71,7 +71,7 @@ void PrimaryGeneratorAction::Bi207Decay(G4Event* anEvent)
         G4double probability;
     };
     std::vector<Bi207decayproduct> decaySpectrum = {
-        { G4ParticleTable::GetParticleTable()->FindParticle("gamma"),  569.7 * keV, 0.9976 }, // 569.7 keV gamma (~99.76%)
+       // { G4ParticleTable::GetParticleTable()->FindParticle("gamma"),  569.7 * keV, 0.9976 }, // 569.7 keV gamma (~99.76%)
         { G4ParticleTable::GetParticleTable()->FindParticle("gamma"),  1063.7 * keV, 0.7458 }, // 1063.7 keV gamma (~74.58%)
         { G4ParticleTable::GetParticleTable()->FindParticle("gamma"),  1770.2 * keV, 0.0687 }, // 1770.2 keV gamma (~6.87%)
         { G4ParticleTable::GetParticleTable()->FindParticle("gamma"),  328.1 * keV, 0.000044 }, // 328.1 keV gamma (~0.0044%)
@@ -100,7 +100,7 @@ void PrimaryGeneratorAction::Bi207Decay(G4Event* anEvent)
             G4PrimaryParticle* particle = new G4PrimaryParticle(decayProduct.particle, decayProduct.energy * direction.x(), decayProduct.energy * direction.y(), decayProduct.energy * direction.z());
             vertex->SetPrimary(particle);
             anEvent->AddPrimaryVertex(vertex);
-            G4cout<<"Generated"<<decayProduct.particle->GetParticleName()<<"at"<<decayProduct.energy/keV<<"keV"<<G4endl;
+            G4cout<<"Generated "<<decayProduct.particle->GetParticleName()<<" at "<<decayProduct.energy/keV<<"keV"<<G4endl;
             break;
         }
     }

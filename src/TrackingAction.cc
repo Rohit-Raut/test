@@ -61,7 +61,7 @@ void TrackingAction::PreUserTrackingAction(const G4Track* track)
 
     //}
     
-    G4bool unstableIon = ((charge>2.)&&!(particle->GetPDGStable()));
+    G4bool unstableIon = ((charge>1.)&&!(particle->GetPDGStable()));
     if (unstableIon)
     {
         runAction->GetHistoManager()->FillEnergyDepositionsNtuple(pid, energy);

@@ -8,16 +8,13 @@ RunAction::RunAction(HistoManager* histo)
 {}
 
 RunAction::~RunAction()
-{
-    delete fHistoManager;
-}
+{}
 
 void RunAction::BeginOfRunAction(const G4Run* /*run*/)
 {
     auto analysisManager = G4GenericAnalysisManager::Instance();
     G4cout << "DEBUG: BeginOfRunAction for run " << G4endl;
     analysisManager->OpenFile(fHistoManager->GetFilename());
-    analysisManager->SetVerboseLevel(1);
     fHistoManager->Book();
     G4cout << "DEBUG: Opened decay_chain.root" << G4endl;
 }
