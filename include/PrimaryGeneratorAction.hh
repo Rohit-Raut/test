@@ -16,7 +16,7 @@ class PrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
     private:
         G4GeneralParticleSource* particleSource;
         G4ParticleDefinition* GetBi207();
-        void Bi207Decay(G4Event* anEvent);
+        //void Bi207Decay(G4Event* anEvent);
         G4ThreeVector RandomDirection();
 	    G4double gamma_energy;
 };

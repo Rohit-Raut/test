@@ -92,7 +92,7 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
     G4double cathodeRadius = 3.0 * cm;
     G4double cathodeThickness = 0.1 * mm;
     G4Tubs* solidCathode = new G4Tubs("Cathode", 0., cathodeRadius, 0.5 * cathodeThickness, 0., 360. * deg);
-    G4LogicalVolume* logicCathode = new G4LogicalVolume(solidCathode, matAnode, "Cathode");
+    G4LogicalVolume* logicCathode = new G4LogicalVolume(solidCathode, matTi, "Cathode");
     new G4PVPlacement(nullptr, G4ThreeVector(0., 0., -0.5 * fDriftLength - 0.5 * cathodeThickness), logicCathode, "Cathode", logicWorld, false, 0, true);
 
     //source parameters

@@ -1,2 +1,12 @@
 /run/initialize
-/run/beamOn 100000
+/process/had/rdm/thresholdForVeryLongDecayTime 1.0e+60 year
+/process/list
+
+#/process/had/rdm/setPhotoEvaporationFile 3
+/process/had/rdm/applyARM true
+/tracking/verbose 2
+#/process/had/rdm/analogueMC false
+#/process/had/rdm/decayBiasProfile uniform
+/process/had/rdm/hlThreshold 1e9 year
+/run/beamOn 1000
+
